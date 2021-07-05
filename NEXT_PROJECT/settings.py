@@ -35,7 +35,7 @@ while True:
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-h6($r34e&y(xy=77)(cxtd5ugngitl=(l7r@$a)gur&4d8n5%1'
+SECRET_KEY = env_list['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
