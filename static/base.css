@@ -1,0 +1,17 @@
+.valhalla_header_logo {
+    margin: 2rem 0;
+    font-family: 'Pacifico', cursive;
+}
+
+.valhalla_header_button {
+    margin-bottom: 2rem;
+}
+
+.thor_footer_logo {
+    margin: 1.5rem 0;
+    font-family: 'Pacifico', cursive;
+}
+
+.thor_footer_button {
+    margin-top: 1.5rem;
+}
