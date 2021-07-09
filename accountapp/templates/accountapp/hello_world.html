@@ -2,8 +2,35 @@
 
 {% block content %}
 
-    <div style="height: 16rem; background-color: aqua; margin: 2rem; border-radius: 1rem">
-    <h1>TEXT</h1>
+    <style>
+        .testing {
+            background-color: yellow;
+            margin: 1rem;
+            height: 48px;
+            width: 48px;
+            border-radius: .5rem;
+            color: mediumvioletred;
+            display: inline-block;
+        }
+
+    </style>
+
+    <div style="height: 16rem; color: white; background-color: darkblue; margin: 2rem; border-radius: 1rem">
+        <h1>TEXT</h1>
+
+
+
+        <div class="testing" style="height: 48px; width: 48px">px</div>
+        <div class="testing" style="height: 3rem; width: 3rem">rem</div>
+        <div class="testing" style="height: 3em; width: 3em">em</div>
+        <div class="testing" style="height: 30%; width: 30%">%</div>
+
+{#    <div class="testing" style="display: block">block</div>#}
+{#    <div class="testing" style="display: inline">inline</div>#}
+{#    <div class="testing" style="display: inline-block">inline-block</div>#}
+{#    <div class="testing" style="display: none">none</div>#}
+{#    <div class="testing">default</div>#}
+
     </div>
 
 {% endblock %}
