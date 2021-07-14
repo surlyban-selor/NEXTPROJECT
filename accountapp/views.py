@@ -22,8 +22,9 @@ def hello_world(request):
         return HttpResponseRedirect(reverse('accountapp:hello_world'))
 
     else:
+        data_list = NewModel.objects.all()
         return render(request, 'accountapp/hello_world.html',
-                      context={'text': 'GET METHOD!'})
+                      context={'data_list': data_list})
 
 class AccountCreateView(CreateView):
     model = User
