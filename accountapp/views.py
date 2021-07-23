@@ -45,12 +45,10 @@ class AccountDetailView(DetailView) :
     template_name = 'accountapp/detail.html'
 
 
+has_ownership = [login_required, account_ownership_required]
 
-
-@method_decorator(login_required, 'get')
-@method_decorator(login_required, 'post')
-@method_decorator(account_ownership_required, 'get')
-@method_decorator(account_ownership_required, 'post')
+@method_decorator(has_ownership, 'get')
+@method_decorator(has_ownership, 'post')
 class AccountUpdateView(UpdateView) :
     model = User
     form_class = AccountCreationForm
@@ -71,10 +69,8 @@ class AccountUpdateView(UpdateView) :
     #         return HttpResponseForbidden()
 
 
-@method_decorator(login_required, 'get')
-@method_decorator(login_required, 'post')
-@method_decorator(account_ownership_required, 'get')
-@method_decorator(account_ownership_required, 'post')
+@method_decorator(has_ownership, 'get')
+@method_decorator(has_ownership, 'post')
 class AccountDeleteView(DeleteView) :
     model = User
     context_object_name = 'target_user'
