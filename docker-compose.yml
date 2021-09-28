@@ -20,6 +20,23 @@ services:
     volumes:
       - nextproject_static:/home/NEXTPROJECT/staticfiles/
       - nextproject_media:/home/NEXTPROJECT/media/
+    secrets:
+      - NEXTPROJECT_DJANGO_SECRET_KEY
+
+
+
+
+  mariadb:
+    image: mariadb:10.5
+    networks:
+      - next_project_network
+    volumes:
+      - nextproject_mariadb:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: password1234
+      MARIADB_DATABASE: django
+      MARIADB_USER: django
+      MARIADB_PASSWORD: password1234
 
 networks:
   next_project_network:
@@ -27,3 +44,8 @@ networks:
 volumes:
   nextproject_static:
   nextproject_media:
+  nextproject_mariadb:
+
+secrets:
+  NEXTPROJECT_DJANGO_SECRET_KEY:
+    external: true
