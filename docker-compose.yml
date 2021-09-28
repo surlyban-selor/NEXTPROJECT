@@ -14,7 +14,7 @@ services:
       - nextproject_media:/data/media/
 
   django:
-    image: nextproject_django:3
+    image: nextproject_django:5
     networks:
       - next_project_network
     volumes:

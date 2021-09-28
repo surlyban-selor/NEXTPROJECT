@@ -2,13 +2,13 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
-RUN echo 'qwesfdghjhvgcf'
+RUN echo 'ghjkloiuygfd'
 
 RUN git clone https://github.com/surlyban-selor/NEXTPROJECT.git
 
 WORKDIR /home/NEXTPROJECT/
 
-RUN echo "SECRET_KEY=django-insecure-h6($r34e&y(xy=77)(cxtd5ugngitl=(l7r@$a)gur&4d8n5%1" > .env
+# RUN echo "SECRET_KEY=django-insecure-h6($r34e&y(xy=77)(cxtd5ugngitl=(l7r@$a)gur&4d8n5%1" > .env
 
 RUN pip install -r requirement.txt
 
